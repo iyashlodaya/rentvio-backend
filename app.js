@@ -32,7 +32,7 @@ const port = process.env.PORT || 8000;
 // My Routes
 app.use("/api", authRoutes);
 app.use("/api", userRoutes);
-app.use("/api", stripeRoutes);
+// app.use("/api", stripeRoutes);
 
 // Starting The Server:
 app.listen(port, () => {
