@@ -6,9 +6,9 @@ const app = express();
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 
-const authRoutes = require("./routes/auth");
-const userRoutes = require("./routes/user");
-const stripeRoutes = require("./routes/stripe");
+const authRoutes = require("./routes/auth.js");
+const userRoutes = require("./routes/user.js");
+// const stripeRoutes = require("./routes/stripe.js");
 
 // DB CONNECTION
 mongoose
