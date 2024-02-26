@@ -8,9 +8,10 @@ const cors = require("cors");
 
 const authRoutes = require("./routes/auth.js");
 const userRoutes = require("./routes/user.js");
-// const stripeRoutes = require("./routes/stripe.js");
+const stripeRoutes = require("./routes/stripe.js");
 const categoriesRoutes = require("./routes/category.js");
 const productsRoutes = require("./routes/product.js");
+const orderRoutes = require("./routes/order.js");
 
 // DB CONNECTION
 mongoose
@@ -36,7 +37,8 @@ app.use("/api", authRoutes);
 app.use("/api", categoriesRoutes);
 app.use("/api", productsRoutes);
 app.use("/api", userRoutes);
-// app.use("/api", stripeRoutes);
+app.use("/api", stripeRoutes);
+app.use("/api", orderRoutes);
 
 // Starting The Server:
 app.listen(port, () => {
