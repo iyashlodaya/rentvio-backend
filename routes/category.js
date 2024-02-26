@@ -15,6 +15,6 @@ router.get("/category/:categoryId", isSignedIn, (req, res) => {
 });
 
 // Route to get all categories
-router.get("/categories",isSignedIn, getAllCategories);
+router.get("/categories", getAllCategories);
 
 module.exports = router;

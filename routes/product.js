@@ -8,8 +8,8 @@ const { isSignedIn } = require("../controllers/auth");
 
 
 // Route to get all categories
-router.get("/products",isSignedIn, getAllProducts);
+router.get("/products", getAllProducts);
 
-router.get("/products/:categoryId", isSignedIn, getProductsByCategory);
+router.get("/products/:categoryId", getProductsByCategory);
 
 module.exports = router;
