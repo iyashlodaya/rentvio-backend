@@ -18,6 +18,7 @@ exports.createOrder = async (req, res) => {
       cart_items,
       total_monthly_rent_to_be_paid,
       total_refundable_deposit,
+      status: 'created'
     });
 
     await order.save();

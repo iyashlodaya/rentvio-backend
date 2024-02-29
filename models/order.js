@@ -13,7 +13,7 @@ const orderSchema = new mongoose.Schema(
     ],
     total_monthly_rent_to_be_paid: Number,
     total_refundable_deposit: Number,
-    // other fields as needed
+    status: String,
   },
   { timestamps: true }
 );
