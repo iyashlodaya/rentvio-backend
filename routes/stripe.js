@@ -1,5 +1,6 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+
 const express = require('express');
+const { payDeposit } = require('../controllers/stripe');
 const router = express.Router();
 
 router.post("/create-subscription", async (req, res) => {
@@ -59,5 +60,7 @@ router.post("/create-subscription", async (req, res) => {
       });
   }
 });
+
+router.post('/pay/deposit', payDeposit);
 
 module.exports = router;
